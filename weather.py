@@ -13,11 +13,11 @@ text_api_key = ConfigParser()
 text_api_key.read("weathar.txt")
 
 #indexing the textfile and the api key
-my_api_pass = text_api_key['my_api_pass'] ['pass']
+api_pass = text_api_key['my_api_pass'] ['pass']
 
 #calling out the json data from the api
 def detect_weather(location):
-    done = requests.get(url_ofmy_api.format(location, my_api_pass))
+    done = requests.get(url_ofmy_api.format(location, api_pass))
     if done:
         jason_data = done.json()
         location = jason_data['name']
