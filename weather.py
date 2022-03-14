@@ -20,14 +20,14 @@ def detect_weather(location):
     done = requests.get(url_ofmy_api.format(location, api_pass))
     if done:
         jason_data = done.json()
-        location = jason_data['name']
+        locate = jason_data['name']
         country = jason_data['sys']['country']
         temp_inkelv = jason_data['main']['temp']
         temp_inc = temp_inkelv - 273.15
         temp_inf  = (temp_inkelv * 9/5) - 459.67
         weather_situation = jason_data['weather'][0]['description']
         show_weather = jason_data['weather'][0]['main']
-        outcome = (location, country, temp_inc, temp_inf, weather_situation , show_weather)
+        outcome = (locate, country, temp_inc, temp_inf, weather_situation , show_weather)
         return outcome
     else:
         return None
