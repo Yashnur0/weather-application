@@ -74,7 +74,7 @@ weather_like = Label(tkwind, text="", width=0, bg="light blue", fg="brown", font
 weather_like.pack(pady=10)
 
 
-#fifnish out the loop
+#finish out the loop
 tkwind.mainloop()
 
 
