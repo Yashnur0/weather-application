@@ -3,7 +3,7 @@ from configparser import ConfigParser
 from tkinter import messagebox
 import requests
 
-
+#Backend-Code
 #API url
 url_ofmy_api = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
 
@@ -45,36 +45,36 @@ def weather_take():
 
 
 # create a tkinter window & set the title & a baground color
-tkwind = Tk()
-tkwind.title("Global Weather App")
-tkwind.configure(background='purple')
+window = Tk()
+window.title("Global Weather App")
+window.configure(background='purple')
 
 #set dimensions of the window
-tkwind.geometry("900x500")
+window.geometry("900x500")
 
 #these are inbuilt functions of python which are used to create a text box
 enter_city = StringVar()
-city = Entry(tkwind, textvariable = enter_city, width=30, bg="gold", fg="black", font=("Calibri", 40, "italic"), justify=CENTER,)
+city = Entry(window, textvariable = enter_city, width=30, bg="gold", fg="black", font=("Calibri", 40, "italic"), justify=CENTER,)
 city.pack(pady=10)
 
 #inbuilt function of python which is used to create search a button
-find_weather = Button(tkwind, text = "Find Weather", width = 20, bg="white", fg = "blue", font = ("Calibri", 30, "italic"), command = weather_take)
+find_weather = Button(window, text = "Find Weather", width = 20, bg="white", fg = "blue", font = ("Calibri", 30, "italic"), command = weather_take)
 find_weather.pack(pady=10)
 
 #this is used to point out you location
-enter_location = Label(tkwind, text="", width=0, bg="red", fg="light blue", font=("Calibri", 30, "italic"))
+enter_location = Label(window, text="", width=0, bg="red", fg="light blue", font=("Calibri", 30, "italic"))
 enter_location.pack(pady=10)
 
 #prints out the temperature of the city searched
-temperature_label = Label(tkwind, text="", width=0, bg="light green", fg="black", font=("Calibri", 30, "italic"))
+temperature_label = Label(window, text="", width=0, bg="light green", fg="black", font=("Calibri", 30, "italic"))
 temperature_label.pack(pady=10)
 
 #prints out the weather of the city searched
-weather_like = Label(tkwind, text="", width=0, bg="light blue", fg="brown", font=("Calibri", 30, "italic"))
+weather_like = Label(window, text="", width=0, bg="light blue", fg="brown", font=("Calibri", 30, "italic"))
 weather_like.pack(pady=10)
 
 
 #finish out the loop
-tkwind.mainloop()
+window.mainloop()
 
 
