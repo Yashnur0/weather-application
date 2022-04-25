@@ -41,40 +41,40 @@ def weather_take():
         temperature_label['text'] = '{:.1f}°C, {:.1f}°F'.format(situation[2], situation[3])
         weather_like ['text'] = situation[4]
     else:
-        messagebox.showerror("Error", "City not found")
+        messagebox.showerror("Error", "City cannot be found, Look up a valid city")
 
 
 # create a tkinter window & set the title & a baground color
-window = Tk()
-window.title("Global Weather App")
-window.configure(background='purple')
+mywindow = Tk()
+mywindow.title("Global Weather App")
+mywindow.configure(background='purple')
 
 #set dimensions of the window
-window.geometry("900x500")
+mywindow.geometry("900x500")
 
 #these are inbuilt functions of python which are used to create a text box
 enter_city = StringVar()
-city = Entry(window, textvariable = enter_city, width=30, bg="gold", fg="black", font=("Calibri", 40, "italic"), justify=CENTER,)
+city = Entry(mywindow, textvariable = enter_city, width=30, bg="gold", fg="black", font=("Arial", 40, "italic"), justify=CENTER,)
 city.pack(pady=10)
 
-#inbuilt function of python which is used to create search a button
-find_weather = Button(window, text = "Find Weather", width = 20, bg="white", fg = "blue", font = ("Calibri", 30, "italic"), command = weather_take)
+#inbuilt function of python which is used to create search a button 
+find_weather = Button(mywindow, text = "Find Weather", width = 20, bg="white", fg = "blue", font = ("Arial", 30, "italic"), command = weather_take)
 find_weather.pack(pady=10)
 
 #this is used to point out you location
-enter_location = Label(window, text="", width=0, bg="red", fg="light blue", font=("Calibri", 30, "italic"))
+enter_location = Label(mywindow, text="", width=0, bg="red", fg="light blue", font=("Arial", 30, "italic"))
 enter_location.pack(pady=10)
 
 #prints out the temperature of the city searched
-temperature_label = Label(window, text="", width=0, bg="light green", fg="black", font=("Calibri", 30, "italic"))
+temperature_label = Label(mywindow, text="", width=0, bg="light green", fg="black", font=("Arial", 30, "italic"))
 temperature_label.pack(pady=10)
 
 #prints out the weather of the city searched
-weather_like = Label(window, text="", width=0, bg="light blue", fg="brown", font=("Calibri", 30, "italic"))
+weather_like = Label(mywindow, text="", width=0, bg="light blue", fg="brown", font=("Arial", 30, "italic"))
 weather_like.pack(pady=10)
 
 
 #finish out the loop
-window.mainloop()
+mywindow.mainloop()
 
 
