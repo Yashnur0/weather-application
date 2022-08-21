@@ -1,3 +1,4 @@
+from queue import Empty
 from tkinter import *
 from configparser import ConfigParser
 from tkinter import messagebox
@@ -30,7 +31,7 @@ def detect_weather(location):
         outcome = (locate, country, temp_inc, temp_inf, weather_situation , show_weather, humid)
         return outcome
     else:
-        return None
+        return Empty
 
 #formating the data
 def weather_take():
@@ -62,7 +63,7 @@ city.pack(pady=10)
 #tkwind.bind("<Return>", detect_weather)
 
 #inbuilt function of python which is used to create search a button
-find_weather = Button(tkwind, text = "Find Weather", width = 20, bg="white", fg = "blue", font = ("Calibri", 30, "italic"), command = weather_take)
+find_weather = Button(tkwind, text = "Press to Find Weather", width = 20, bg="white", fg = "blue", font = ("Calibri", 30, "italic"), command = weather_take)
 find_weather.pack(pady=10)
 
 #this is used to point out you location
