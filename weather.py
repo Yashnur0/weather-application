@@ -7,7 +7,7 @@ import requests
 url_ofmy_api = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
 
 #calling the text file
-
+#configure the text from the text file for funtionality
 text_api_key = ConfigParser()
 text_api_key.read("weathar.txt")
 
