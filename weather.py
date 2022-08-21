@@ -3,12 +3,11 @@ from configparser import ConfigParser
 from tkinter import messagebox
 import requests
 
-
-#API url #API url from open temperature website documentation
+#API url from open temperature website documentation
 url_ofmy_api = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
 
 #calling the text file
-# text_api_file = "file.txt"
+
 text_api_key = ConfigParser()
 text_api_key.read("weathar.txt")
 
