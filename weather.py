@@ -4,7 +4,7 @@ from tkinter import messagebox
 import requests
 
 
-#API url
+#API url from opentemperature website
 url_ofmy_api = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
 
 #calling the text file
