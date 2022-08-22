@@ -31,7 +31,7 @@ def detect_weather(location):
         outcome = (locate, country, temp_inc, temp_inf, weather_situation , show_weather, humid)
         return outcome
     else:
-        print("Invalid city, enter a valid city")
+        return Empty
 
 #formating the data
 def weather_take():
@@ -44,7 +44,7 @@ def weather_take():
         humid_label['text'] = "Humidity: {}%".format(situation[6])
 
     else:
-        messagebox.showerror("Error", "City not found")
+        messagebox.showerror("Error", "City not found, enter a valid city")
 
 
 # create a tkinter window & set the title & a baground color
