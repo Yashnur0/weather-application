@@ -60,7 +60,7 @@ enter_city = StringVar()
 city = Entry(tkwind, textvariable = enter_city, width=30, bg="#F7E400", fg="black", font=("Calibri", 40, "italic"), justify=CENTER,)
 city.pack(pady=10)
 
-#tkwind.bind("<Return>", detect_weather)
+
 
 #inbuilt function of python which is used to create search a button
 find_weather = Button(tkwind, text = "Press to Find Weather", width = 20, bg="white", fg = "blue", font = ("Calibri", 30, "italic"), command = weather_take)
