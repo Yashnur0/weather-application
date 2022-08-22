@@ -31,7 +31,7 @@ def detect_weather(location):
         outcome = (locate, country, temp_inc, temp_inf, weather_situation , show_weather, humid)
         return outcome
     else:
-        return Empty
+        print("Invalid city, enter a valid city")
 
 #formating the data
 def weather_take():
